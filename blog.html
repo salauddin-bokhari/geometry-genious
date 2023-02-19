@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog About Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-12 bg-gray-100">
+    <div class="grid rounded">
+        <div class="bg-teal-300 rounded mb-2">
+            <h1 class="font-bold text-4xl text-center pb-2">What is DOM and it's importance</h1>
+            <p class="font-normal text-xl py-5 px-8">DOM stands for Document Object Model, which is a programming interface for web documents. It represents the HTML or XML document as a tree structure, where each node in the tree corresponds to a part of the document, such as an element, attribute, or text node. <br> <br> The purpose of the DOM is to provide a way for programs to access and manipulate the content and structure of a web page. It allows web developers to dynamically update the content of a page without reloading the entire page.</p>
+        </div>
+        <div class="bg-teal-200 rounded mb-2 ">
+            <h1 class="font-bold text-4xl text-center py-2">How to select element from DOM?</h1>
+            <p class="font-normal text-xl py-5 px-8">
+                To select HTML elements using the DOM, there are several methods available. Here are some of the most commonly used DOM methods for selecting elements: <br> 
+                1. getElementsByTagName() <br>
+                2. getElementsByClassName() <br>
+                3. getElementById() <br>
+                4. querySelector() <br>
+                5. querySelectorAll() <br>
+            </p>
+        </div>
+        <div class="bg-teal-100 rounded mb-2">
+            <h1 class="font-bold text-4xl text-center py-2">What is Event Bubble?</h1>
+            <p class="py-5">Event bubbling is a mechanism in which an event that is triggered on an element is propagated up the DOM tree, from the target element to its parent elements, all the way up to the document object. <br><br>When an event is triggered on an element, it first fires on the element itself, then bubbles up to its parent elements in the DOM tree until it reaches the document object.</p>
+        </div>
+        <div class="bg-teal-50">
+            <h1 class="font-bold text-4xl text-center py-2">What is Callback Function and how it is used?</h1>
+            <p class="font-normal text-xl py-5 px-8">
+                In programming, a callback function is a function that is passed as an argument to another function and is executed by that function at a certain point in its execution. The purpose of a callback function is to allow the caller function to execute some code or perform some action after the execution of the called function is complete.
+            </p>                      
+        </div>
+    </div>
+    <div>
+        <a href="index.html">
+            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:bg-red-700">Return to the calculation Page</button>
+        </a>     
+    </div>
+</body>
+</html>

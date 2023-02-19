@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      </style>
+</head>
+<body>
+    <header
+      class="container bg-blue-200 bg-opacity-50 mx-auto py-10 md:py-5 px-12 mt-5 rounded-md md:flex justify-between items-center">
+      <div class="brand">
+        <h4 class="text-5xl font-bold text-gray-700">Interactive</h4>
+        <p class="text-3xl font-medium text-gray-500 mt-2">Geometry Genius</p>
+      </div>
+      <div class="pt-10 md:pt-0">
+        <a
+          href="./blog.html"
+          class="bg-blue-500 px-10 py-3 rounded-md text-white font-bold text-xl"
+          target="_blank">
+          Blog
+        </a>
+      </div>
+    </header>
+    <main class="container mx-auto my-5 px-5 md:px-0">
+        <section class="lg:grid md:px-5 lg:px-0 xl:grid-cols-10 lg:grid-cols-7 gap-5">
+            <div class="col-span-7 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-5 md:space-y-0">
+                <!-- Triangle -->
+          <div
+          class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg"
+        >         
+          <div class="flex items-center justify-center">
+            <img src="./images/triangle.png" alt="" />
+          </div>
+          <div class="mt-7 text-gray-600">
+            <h4 class="text-2xl font-bold">Triangle</h4>
+            <p>
+              Area (A) = 0.5 x <span id="triangleBase">b</span> x
+              <span id="triangleHeight">h</span>
+            </p>
+            <input
+              id="triangleBaseInput"
+              type="number"
+              placeholder="b"
+              class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+            <span class="mx-2">cm</span>
+            <input
+              id="triangleHeightInput"
+              type="number"
+              placeholder="h"
+              class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+          <span class="mx-2">cm</span>
+          </div>
+          <button
+            id="triangleButton"
+            type="button"
+            class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+            Calculate
+          </button>
+        </div>
+        <!-- Rectangle -->
+        <div
+        class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg"
+      >
+        <div class="flex items-center justify-center">
+          <img src="./images/rectangle.png" alt="" />
+        </div>           
+        <div class="mt-7 text-gray-600">
+          <h4 class="text-2xl font-bold">Rectangle</h4>
+          <p>
+            Area (A) = <span id="rectangleWeight">w</span> x
+            <span id="rectangleLength">l</span>
+          </p>
+          <input
+            id="rectangleWeightInput"
+            type="number"
+            placeholder="w"
+            class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+          <span class="mx-2">cm</span>
+          <input
+            id="rectangleHeightInput"
+            type="number"
+            placeholder="l"
+            class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+          <span class="mx-2">cm</span>
+        </div>
+        <button
+          type="button"
+          id="rectangleButton"
+          class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+          Calculate
+        </button>
+      </div>
+      <!-- Parallelogram -->
+      <div
+      class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg">          
+      <div class="flex items-center justify-center">
+        <img src="./images/parallelogram.png" alt="" />
+      </div>
+      <div class="mt-7 text-gray-600">
+        <h4 class="text-2xl font-bold">Parallelogram</h4>
+        <p>
+          Area (A) = <span id="parallelogramBase">b</span> x
+          <span id="parallelogramHeight">h</span>
+        </p>
+        <input
+          id="parallelogramBaseInput"
+          type="number"
+          placeholder="b"
+          class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+        <span class="mx-2">cm</span>
+        <input
+          id="parallelogramHeightInput"
+          type="number"
+          placeholder="h"
+          class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+        <span class="mx-2">cm</span>
+      </div>
+      <button
+        type="button"
+        id="parallelogramBtn"
+        class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+        Calculate
+      </button>
+    </div>
+    <!-- Rhombus -->
+    <div
+    class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg">
+    <div class="flex items-center justify-center">
+      <img src="./images/rhombus.png" alt="" />
+    </div>
+    <div class="mt-7 text-gray-600">
+      <h4 class="text-2xl font-bold">Rhombus</h4>
+      <p>
+        Area (A) = 0.5 x <span id="rhombusBase">d<sub>1</sub></span> x
+        <span id="rhombusHeight">d<sub>2</sub></span>
+      </p>
+      <input
+        id="rhombusInputD1"
+        type="number"
+        placeholder="d1"
+        class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+      <span class="mx-2">cm</span>
+      <input
+        id="rhombusInputD2"
+        type="number"
+        placeholder="d2"
+        class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+      <span class="mx-2">cm</span>
+    </div>
+    <button
+      type="button"
+      id="rhombusButton"
+      class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+      Calculate
+    </button>
+  </div>
+    <!-- Pentagon -->
+    <div
+    class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg">
+    <div class="flex items-center justify-center">
+      <img src="./images/pentagon.png" alt="" />
+    </div>
+    <div class="mt-7 text-gray-600">
+      <h4 class="text-2xl font-bold">Pentagon</h4>
+      <p>
+        Area (A) = 0.5 x <span id="pentagonP">p</span> x
+        <span id="pentagonB">b</span>
+      </p>
+      <input
+        id="pentagonInputP"
+        type="number"
+        placeholder="p"
+        class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+      <span class="mx-2">cm</span>
+      <input
+        id="pentagonInputB"
+        type="number"
+        placeholder="b"
+        class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"
+      />
+      <span class="mx-2">cm</span>
+    </div>
+    <button
+      type="button"
+      id="pentagonButton"
+      class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+      Calculate
+    </button>
+  </div>
+  <!-- Ellipse -->
+  <div
+  class="border border-gray-300 rounded-md text-center py-10 duration-400 transition-colors random-bg"
+>
+  <div class="flex items-center justify-center">
+    <img src="./images/ellipse.png" alt="" />
+  </div>
+  <div class="mt-7 text-gray-600">
+    <h4 class="text-2xl font-bold">Ellipse</h4>
+    <p>
+      Area (A) = π<span id="ellipseA">a</span
+      ><span id="ellipseB">b</span>
+    </p>
+    <input
+      id="ellipseInputA"
+      type="number"
+      placeholder="a"
+      class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"
+    />
+    <span class="mx-2">cm</span>
+    <input
+      id="ellipseInputB"
+      type="number"
+      placeholder="b"
+      class="border-0 bg-gray-200 px-5 py-2 rounded-md mt-3 w-24"/>
+    <span class="mx-2">cm</span>
+  </div>
+  <button
+    type="button"
+    id="ellipseButton"
+    class="py-3 bg-blue-500 px-24 rounded-md text-white font-bold text-xl mt-10">
+    Calculate
+       </button>
+      </div>
+     </div>
+    </div>
+        <!-- Calculation Card -->
+        <div class="col-span-3">
+            <div
+              class="border border-gray-300 rounded-md text-center py-10"
+              id="calculationResult"
+            >
+              <h4 class="text-xl font-semibold underline mb-5">
+                Area Calculation
+              </h4>
+            </div>
+          </div>
+        </section>
+    </main>
+      <!-- TAILWIND CSS -->
+
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <!-- JS File -->
+  
+      <script src="event.js"></script>
+  
+    
+</body>
+</html>
